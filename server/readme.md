@@ -7,6 +7,7 @@ Esta en una api REST creada con express.js y MongoDb que sirve como complemento 
 ## Peticiones
 
 - GET "/" - provee los datos globales sobre el coronaviurus y los paises 
+    * Devuelve un objeto de tipo [Global](#Global)
 
 - GET "/update" - como heroku duerme las paginas que no son visitadas en un margen de tiempo, crear un evento que periodicamente actualice los datos no fue posible, así con mediante esta url pueden actualizarse los datos que contiene la app.
 
@@ -15,7 +16,7 @@ Esta en una api REST creada con express.js y MongoDb que sirve como complemento 
     * Estructura del Body: { countries: [ country ] }
 
         - Estructura de country: country: { name: String, cod: String } 
-
+    *Devuelve un array de objetos de tipo [Country](#Country)
 ### Tipos de datos
 
 #### Global
