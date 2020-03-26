@@ -154,9 +154,14 @@ app.get('/country', async function(req, res){
     const {countries} = body;
     const dataCountries = [];
     for(let i = 0; i < countries.length; i++){
-        const response = await Country.findOne({name: countries[i].name});
+        const response = await Country.findOne(
+            {$or: [
+                {name: countries[i].name},
+                {cod: countries[i].cod}
+                
+            ]}
+            );
         if(response) dataCountries.push(response);
-        console.log(dataCountries);
     }
     res.json(dataCountries);
     }catch(err){
