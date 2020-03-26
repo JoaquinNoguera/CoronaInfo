@@ -16,7 +16,7 @@ Esta en una api REST creada con express.js y MongoDb que sirve como complemento 
     * Estructura del Body: { countries: [ country ] }
 
         - Estructura de country: country: { name: String, cod: String } 
-    *Devuelve un array de objetos de tipo [Country](#Country)
+    * Devuelve un array de objetos de tipo [Country](#Country)
 ### Tipos de datos
 
 #### Global
