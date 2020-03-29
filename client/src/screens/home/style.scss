@@ -1,0 +1,109 @@
+#header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15em;
+    .containerText{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h1{
+            color: #333333;
+            font-size: 3em;
+            font-style: italic;
+            font-weight: 600;
+        }
+    }
+            svg{
+                margin: 0 1em;
+                height: 10em;
+                width: 10em;
+            }
+    }
+
+.content{
+    background: #effcef;
+    box-shadow: 0px -0.09em 0.3em rgba(0, 0, 0, 0.6); 
+    .container{
+        margin: auto;
+        width: 65vw;
+        padding: 2em 0;
+        display: flex;
+        
+
+        .textContainer{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 70%;
+            h2{
+                align-self: flex-start;
+                font-size: 2em;
+            }
+            p{
+                padding-right: 1em;
+                font-size: 1.3em;
+                text-align: justify;
+            }
+        }
+        button{
+            cursor: pointer;
+            padding: 0.4em 0.6em;
+            margin-top: 1.5em;
+            width: 8em;
+            font-size: 1.2em;
+            background: #333333;
+            color: #f9f9f9;
+            border: none;
+            border-radius: 10px;
+        }
+
+        button:hover{
+            opacity: 90%;
+        }
+
+        svg{
+            width: 13em;
+            height: 13em;
+            margin: 0 2em;
+        }
+    }
+}
+
+
+.charlie {
+    position: relative;
+    font-size: 1.5em;
+    height: 1em;
+    border: 0;
+    -webkit-filter: drop-shadow(hsla(0, 0%, 0%, 0.75) 1px 3px 5px);
+  }
+  
+  .charlie:before,
+  .charlie:after {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-size: 1em 100%;
+    height: inherit;
+  }
+  
+  .charlie:before {
+    content: '';
+    background-image:
+      linear-gradient(315deg, hsla(0, 0%, 0%, 0.75) 25%, transparent 25%),
+      linear-gradient(45deg, hsla(0, 0%, 0%, 0.75) 25%, transparent 25%);
+    background-position: 50%;
+    top: -0.5em;
+  }
+  
+  .charlie:after {
+    content: '';
+    background-image: 
+      linear-gradient(135deg, hsla(0, 0%, 0%, 0.75) 25%, transparent 25%),
+      linear-gradient(225deg, hsla(0, 0%, 0%, 0.75) 25%, transparent 25%);
+    background-position: -webkit-calc(50% - 0.5em);
+    top: 0.5em;
+  }
+  
