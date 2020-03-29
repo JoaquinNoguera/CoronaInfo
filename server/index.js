@@ -1,5 +1,6 @@
 const express = require('express');
 const fetch = require('node-fetch');
+const cors = require('cors')
 const connect = require('./db');
 const Global = require('./global');
 const Country = require('./country');
@@ -7,6 +8,8 @@ const Country = require('./country');
 const app = express();
 app.use(express.json());
 const port = process.env.PORT || 3000;
+
+app.use(cors());
 connect();
 
 const consultGlobal = async () => {
@@ -158,7 +161,6 @@ app.get('/country', async function(req, res){
             {$or: [
                 {name: countries[i].name},
                 {cod: countries[i].cod}
-                
             ]}
             );
         if(response) dataCountries.push(response);

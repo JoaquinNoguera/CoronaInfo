@@ -1,9 +1,11 @@
 import React from 'react';
-import TosIcon from '../../assets/tos.svg';
-import PastelIcon from '../../assets/pastel.svg';
-import Paises from '../../assets/paises.svg';
+import Image1 from '../../assets/tos.svg';
+import PastelIcon from '../../assets/Image1.svg';
+import Image2 from '../../assets/Image2.svg';
+import Image3 from '../../assets/Image3.svg';
+import {Link} from 'react-router-dom'
 import './style.scss';
-export default function Home(){
+export default function(props){
     return(
         <div>
             <div id="header">
@@ -11,34 +13,49 @@ export default function Home(){
                     <h1>CORONA</h1>
                     <h1>INFO</h1>
                 </div>
-                <TosIcon/>
+                <Image1/>
             </div>
 
             <div className="content">
-                <div className="container">
+                <div className="container" style={{background:"#f1f3f4"}}>
                     <div className="textContainer">
                         <h2>Estadisticas Globales</h2>
                         <p>
                             Estadisticas actualizadas sobre los disitintos lugares del mundo.
-                            Analisis diario y graficas evolutivas de como progresa la enfermedad
+                            Analisis periodico y graficas evolutivas de como progresa la enfermedad
                             a lo largo del tiempo. 
                         </p>
-                        <button>Conocer más</button>
+                        <Link to="/paises">
+                        <button>
+                            Conocer más
+                        </button>
+                        </Link>
                     </div>
                     <PastelIcon/>
                 </div>
-                <hr className="charlie"/>
-                <div className="container">
+                <div className="container"  style={{background:"#f9f9f9"}}>
+                    <Image2/>
                     <div className="textContainer">
-                        <h2>Comparador de Paises</h2>
+                        <h2>Comparador de Image2</h2>
                         <p>
-                            Compra los distintos paises y sus estadisticas entre si,
+                            Compra los distintos Image2 y sus estadisticas entre si,
                             asi como tambien puedes comprararlos con los porcentaje
                             promedio a nivel mundial
                         </p>
                         <button>Comparar</button>
                     </div>
-                    <Paises/>
+                </div>
+                <div className="container"  style={{background:"#f4eeff"}}>
+                    <div className="textContainer">
+                        <h2>¿Falta información?</h2>
+                        <p>
+                        Los datos empezaron a ser recolectados el 25 de Marzo del 2020 y 
+                        la actualización puede no ser diaria,
+                        fechas anteriores no han sido almacenadas. Se agradece la 
+                        comprensión.
+                        </p>
+                    </div>
+                    <Image3/>
                 </div>
             </div>
         </div>

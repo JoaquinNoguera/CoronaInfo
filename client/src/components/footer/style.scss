@@ -1,0 +1,27 @@
+#footer{
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 10em;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10%;
+    background: #333333;
+    
+    .footerContent{
+        flex: 1;
+        h3{
+            color: #f9f9f9;
+        }
+        p{
+            color: #f9f9f9;
+        }
+
+        a{
+            color: #f9f9f9;
+            font-weight: 600;
+        }
+        a:hover{
+            opacity: 90%;
+        }
+    }
+}
