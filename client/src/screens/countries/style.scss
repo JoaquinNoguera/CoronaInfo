@@ -1,0 +1,81 @@
+#CountriesContainer{
+    padding: 1em;
+    display: flex;;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h1{
+        text-align: center;
+        text-transform: uppercase;
+    }
+        input{
+            width: 70vw;
+            height: 2em;
+            margin: 1em;
+            color: #333333;    
+            border: 1px solid #e6e6e6;
+            padding: 0.7em 1em;
+            border-radius: 15px;
+        }
+        #filterContainer{
+            width: 80vw;
+        }
+        .contentWrapper{
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: space-evenly;
+            button{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 9em;
+                height: 9em;
+                border-radius: 50%;
+                border: 2px solid #1eb2a6;
+                background: transparent;
+                svg{
+                    width: 3em;
+                    height: 3em;
+                }
+                p{
+                    text-transform: uppercase;
+                    font-weight: 600;
+                }
+            }
+            button:hover{
+                opacity: 80%;
+                p{
+                    color: #1eb2a6;
+                }
+            }
+        }
+        .aclarationWrapper{
+            display: flex;
+            flex-direction: column;
+            margin: 1em;
+            
+            .aclarationContainer{
+                display: flex;
+                align-items: center;
+                .bad{
+                    width: 1em;
+                    height: 1em;
+                    background: #d63447;
+                    border-radius: 50%;
+                }
+                .good{
+                    width: 1em;
+                    height: 1em;
+                    background: #1eb2a6;
+                    border-radius: 50%;
+                }
+                p{
+                    margin-left: 0.5em;
+                    font-style: italic;
+                    color: #5b5656
+                }
+            }
+        }
+}

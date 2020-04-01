@@ -152,9 +152,15 @@ app.get('/', async function(_, res){
 
 app.get('/country', async function(req, res){
     try{
-    if(!req.body) throw new Error("faltan campos");
+    if(!req.body) {
+        const response = await Country.find();
+        res.json(response)
+    }else{
     const {body} = req;
-    if(!body.countries) throw new Error("faltan campos");; 
+    if(!body.countries) {
+            const response = await Country.find();
+            res.json(response)
+    }else{
     const {countries} = body;
     const dataCountries = [];
     for(let i = 0; i < countries.length; i++){
@@ -167,6 +173,8 @@ app.get('/country', async function(req, res){
         if(response) dataCountries.push(response);
     }
     res.json(dataCountries);
+    }
+}
     }catch(err){
         res.json({"error": "faltan campos"});
     }

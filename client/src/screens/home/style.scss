@@ -34,6 +34,7 @@
         width: 70%; 
         padding: 4em 15%;
         display: flex;
+        align-items: center;
 
         .textContainer{
             display: flex;
@@ -81,4 +82,38 @@
             margin: 0 2em;
         }
     }
+}
+
+
+@media only screen 
+and (min-device-width: 320px) 
+and (max-device-width: 556px){
+    #header{
+        padding: 0.5em;
+    }
+    .container{
+        svg{
+            display: none;
+        }
+    }
+    .content .container .textContainer{
+        width: 100%;
+    }
+}
+
+@media only screen 
+and (min-device-height: 320px) 
+and (max-device-height: 556px){
+    #header{
+        padding: 0.5em;
+    }
+    .container{
+        svg{
+            display: none;
+        }
+    }
+    .content .container .textContainer{
+        width: 100%;
+    }
+
 }

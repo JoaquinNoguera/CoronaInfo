@@ -1,11 +1,12 @@
 import React from 'react';
 import Image1 from '../../assets/tos.svg';
-import PastelIcon from '../../assets/Image1.svg';
-import Image2 from '../../assets/Image2.svg';
-import Image3 from '../../assets/Image3.svg';
+import Image2 from '../../assets/Image1.svg';
+import Image3 from '../../assets/Image2.svg';
+import Image4 from '../../assets/Image3.svg';
 import {Link} from 'react-router-dom'
 import './style.scss';
-export default function(props){
+
+export default function(){
     return(
         <div>
             <div id="header">
@@ -31,14 +32,14 @@ export default function(props){
                         </button>
                         </Link>
                     </div>
-                    <PastelIcon/>
+                    <Image2/>
                 </div>
                 <div className="container"  style={{background:"#f9f9f9"}}>
-                    <Image2/>
+                    <Image3/>
                     <div className="textContainer">
-                        <h2>Comparador de Image2</h2>
+                        <h2>Comparador de Paises</h2>
                         <p>
-                            Compra los distintos Image2 y sus estadisticas entre si,
+                            Compra los distintos paises y sus estadisticas entre si,
                             asi como tambien puedes comprararlos con los porcentaje
                             promedio a nivel mundial
                         </p>
@@ -55,7 +56,7 @@ export default function(props){
                         comprensión.
                         </p>
                     </div>
-                    <Image3/>
+                    <Image4/>
                 </div>
             </div>
         </div>
