@@ -49,7 +49,30 @@
     }
     .goToStats:hover{
         background: #1eb2a6;
-        color: #eeeeee;
+        color: white;
     }
     
+}
+
+#containerOrder{
+    margin-top: 1em;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    
+    button{
+        width: 11em;
+        padding: 0.3em 0.6em;
+        font-size: 0.7em;
+        text-transform: uppercase;
+        font-weight: 600;
+        border-radius: 10px;
+        background: white;
+        color: #1eb2a6;
+        border: 1px solid #1eb2a6;
+    }
+    button:hover{
+        background: #1eb2a6;
+        color: white;
+    }
 }

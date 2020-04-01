@@ -58,7 +58,7 @@ export default function(props){
           </button>
         </Link>
         </div>
-        
+
         <div>
           <div id="filterContainer">
             <Filter

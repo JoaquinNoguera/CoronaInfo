@@ -4,14 +4,19 @@ import './style.scss';
 
 export default function filter(props){
     const {countries, filter,total} = props; 
-
-    const arrByCases = countries.sort(function (a,b){
+    
+    const [order,setOrder] = React.useState(true);
+    
+    const copy = [...countries];
+    const arrByCases = copy.sort(function (a,b){
         return b.days[b.days.length - 1].confirmed - a.days[a.days.length - 1].confirmed;
     });
     const re = new RegExp(`(${filter.toUpperCase()})`);
-    const arr = arrByCases.map((c) => {
+
+    const arr = (order) ? (arrByCases) : (countries);
+    
+    const arrList = arr.map((c) => {
         if(filter === "" || c.name.toUpperCase().search(re) !== -1){
-        
             const width = parseInt((c.days[c.days.length - 1].confirmed * 100 / total * countries.length));
             const background = (width > 100) ? ("#d63447") : ("#1eb2a6");
             return <div
@@ -43,6 +48,18 @@ export default function filter(props){
 return <div
             id="CountriesWrapper"
         >
-            {arr}
+            <div id="containerOrder">
+                <button
+                    onClick={()=>{setOrder(true)}}
+                >
+                    Order por casos
+                </button>
+                <button
+                    onClick={()=>{setOrder(false)}}
+                >
+                    Ordenar alfabeticamente
+                </button>
+            </div>
+            {arrList}
         </div>;
 }

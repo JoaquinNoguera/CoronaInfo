@@ -11,7 +11,7 @@
         input{
             width: 70vw;
             height: 2em;
-            margin: 1em;
+            margin: 2em;
             color: #333333;    
             border: 1px solid #e6e6e6;
             padding: 0.7em 1em;
@@ -21,6 +21,7 @@
             width: 80vw;
         }
         .contentWrapper{
+            margin: 0.5em;
             display: flex;
             width: 100%;
             align-items: center;
@@ -78,4 +79,13 @@
                 }
             }
         }
+}
+
+
+@media only screen 
+and (min-device-width: 320px) 
+and (max-device-width: 556px){
+    #CountriesContainer .aclarationWrapper{
+        display: none;
+    }
 }
