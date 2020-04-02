@@ -15,10 +15,12 @@
     "@babel/polyfill": "^7.8.7",
     "@babel/preset-env": "^7.8.7",
     "@babel/preset-react": "^7.8.3",
+    "anychart": "^8.7.1",
     "anychart-react": "^1.4.1",
     "babel-loader": "^8.0.6",
     "node-sass": "^4.13.1",
     "react": "^16.13.0",
+    "react-charts": "^2.0.0-beta.6",
     "react-dom": "^16.13.0",
     "react-router-dom": "^5.1.2"
   },

@@ -6,6 +6,8 @@ import Navbar from './components/navbar';
 import Footer from './components/footer';
 import Home from './screens/home';
 import Countries from './screens/countries';
+import Stats from './screens/stats';
+import Loading from './components/Loading';
 import './style.scss';
 
 
@@ -26,7 +28,7 @@ function App(){
     }
 
     if(!data){
-        return <div>Loading</div>;
+        return <Loading/>;
     }else{
     return(
             <HashRouter>
@@ -37,6 +39,14 @@ function App(){
                             <Countries
                                 state={state}
                             />
+                        </Route>
+                        <Route exact path="/estadisticas/:place">
+                            <Stats
+                                state={state}
+                            />
+                        </Route>
+                        <Route>
+                            <Loading/>
                         </Route>
                 </Switch>
                 <Footer/>

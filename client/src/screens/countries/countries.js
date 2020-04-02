@@ -2,6 +2,7 @@ import React from 'react';
 import Filter from '../../components/filter';
 import Input from '../../components/Input';
 import IconWorld from '../../assets/coronavirus.svg';
+import Loading from '../../components/Loading';
 import {Link} from 'react-router-dom';
 import './style.scss';
 
@@ -71,6 +72,6 @@ export default function(props){
         </div>
       )
     }else{
-      return <div>Loading</div>
+      return <Loading/>
     }
 }
