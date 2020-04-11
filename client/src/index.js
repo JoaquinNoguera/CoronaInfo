@@ -7,6 +7,8 @@ import Footer from './components/footer';
 import Home from './screens/home';
 import Countries from './screens/countries';
 import Stats from './screens/stats';
+import Compare from './screens/compare';
+import NotFound from './screens/NotFound';
 import Loading from './components/Loading';
 import './style.scss';
 
@@ -45,8 +47,11 @@ function App(){
                                 state={state}
                             />
                         </Route>
+                        <Route exact path="/comparador">
+                            <Compare/>
+                        </Route>
                         <Route>
-                            <Loading/>
+                            <NotFound/>
                         </Route>
                 </Switch>
                 <Footer/>

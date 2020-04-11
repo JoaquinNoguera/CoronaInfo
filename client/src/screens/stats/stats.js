@@ -20,14 +20,14 @@ const Stats =  (props) => {
         const [index,setIndex] = React.useState(days.length - 1);
         
         const date = new Date(days[index].lastUpdate);
-        const title = `${date.getDate()} de ${Month[date.getMonth()].name}`
+        const title = `${date.getDate()} de ${Month[date.getMonth()].name} \n ${days[index].confirmed} casos `
         
         const pieSettings = {
             type: 'pie',
             title: title,
             data: [
                 {x: "Muertos", value: days[index].deaths, fill: '#eb4559'},
-                {x: "Enfermos", value: (days[index].confirmed - days[index].deaths - days[index].recovered), fill: '#ffd31d'},
+                {x: "En Recuperación", value: (days[index].confirmed - days[index].deaths - days[index].recovered), fill: '#ffd31d'},
                 {x: "Recuperados", value: days[index].recovered, fill: '#216353'},
               ]
           };
@@ -92,6 +92,7 @@ const Stats =  (props) => {
             <h1> {name} </h1>
             <div className="pieWrapper">
                 <div className="daysContainer">
+                  <h1>Elige una fecha</h1>
                     {arrDay}
                 </div>
                         <AnyChart

@@ -6,7 +6,9 @@ import './style.scss';
 export default function(){
     return(
         <div id="navbar">
+                <Link to="/">
                     <TosIcon/>
+                </Link>
                 <ul>
                     <Link to="/">
                         <li>Home</li>
@@ -14,7 +16,7 @@ export default function(){
                     <Link to="/paises">
                         <li>Paises</li>
                     </Link>
-                    <Link to="/">
+                    <Link to="/comparador">
                         <li>Comparador</li>
                     </Link>
                 </ul>

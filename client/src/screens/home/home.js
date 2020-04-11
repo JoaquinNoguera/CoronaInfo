@@ -43,7 +43,9 @@ export default function(){
                             asi como tambien puedes comprararlos con los porcentaje
                             promedio a nivel mundial
                         </p>
+                        <Link to="/comparador">
                         <button>Comparar</button>
+                        </Link>
                     </div>
                 </div>
                 <div className="container"  style={{background:"#f4eeff"}}>
