@@ -11,30 +11,30 @@
         width: 3em;
         height: 3em;
     }
-
-    ul{
+    #serchContainer{
         display: flex;
-        list-style: none;
-        li{
-            margin: 1em;
-            font-size: 1.1em;
-            text-transform: uppercase;
-            font-weight: 600;
-            color: #f9f9f9;
+        height: 40px;
+        align-items: stretch;
+        input{
+            margin-right: 1em;
+            height: auto;
+            border-radius: 0 15px 15px 0;
+        }
+        button{
+            background: #e6e6e6;
+            border: none;
+            height: auto;
+            border-radius: 15px 0 0 15px;
             cursor: pointer;
-        }
-        li:hover{
-            opacity: 90%;
-        }
-    }
-}
 
-@media only screen 
-and (min-device-width: 320px) 
-and (max-device-width: 556px){
-    #navbar{
-        svg{
-            display: none;
+            svg{
+                height: 2em;
+                width: 2em;
+            }
+        }
+
+        button:hover{
+            opacity: 0.9;
         }
     }
 }

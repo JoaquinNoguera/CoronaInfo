@@ -1,12 +1,12 @@
 import React from 'react';
-import Image1 from '../../assets/tos.svg';
-import Image2 from '../../assets/Image1.svg';
-import Image3 from '../../assets/Image2.svg';
-import Image4 from '../../assets/Image3.svg';
+import Tos from '../../assets/tos.svg';
+import Image1 from '../../assets/Image1.svg';
+import Image2 from '../../assets/Image2.svg';
 import {Link} from 'react-router-dom'
 import './style.scss';
 
 export default function(){
+    React.useLayoutEffect(()=> window.scrollTo(0, 0));
     return(
         <div>
             <div id="header">
@@ -14,7 +14,7 @@ export default function(){
                     <h1>CORONA</h1>
                     <h1>INFO</h1>
                 </div>
-                <Image1/>
+                <Tos/>
             </div>
 
             <div className="content">
@@ -32,23 +32,10 @@ export default function(){
                         </button>
                         </Link>
                     </div>
-                    <Image2/>
+                    <Image1/>
                 </div>
                 <div className="container"  style={{background:"#f9f9f9"}}>
-                    <Image3/>
-                    <div className="textContainer">
-                        <h2>Comparador de Paises</h2>
-                        <p>
-                            Compra los distintos paises y sus estadisticas entre si,
-                            asi como tambien puedes comprararlos con los porcentaje
-                            promedio a nivel mundial
-                        </p>
-                        <Link to="/comparador">
-                        <button>Comparar</button>
-                        </Link>
-                    </div>
-                </div>
-                <div className="container"  style={{background:"#f4eeff"}}>
+                    <Image2/>
                     <div className="textContainer">
                         <h2>¿Falta información?</h2>
                         <p>
@@ -58,7 +45,6 @@ export default function(){
                         comprensión.
                         </p>
                     </div>
-                    <Image4/>
                 </div>
             </div>
         </div>

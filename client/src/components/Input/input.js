@@ -5,10 +5,11 @@ export default function Input(inputData = {
                                               placeholder:"",
                                               required:false,
                                               className:"",
-                                              init: ""
+                                              init: "",
+                                              list:""
                                             }) {
    
-  const {type,placeholder,required,className,init} = inputData;
+  const {type,placeholder,required,className,init,list} = inputData;
   
   const [value, setValue] = useState(init);
   
@@ -20,6 +21,7 @@ export default function Input(inputData = {
                         value={value}
                         onChange={e=> setValue(e.target.value)}
                         className={className}
+                        list={list}
                     />
 
   return [value,input];

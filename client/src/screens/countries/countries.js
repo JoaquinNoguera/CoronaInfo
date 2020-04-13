@@ -7,21 +7,21 @@ import {Link} from 'react-router-dom';
 import './style.scss';
 
 export default function(props){
-      React.useLayoutEffect(()=> window.scrollTo(0, 0))
+      React.useLayoutEffect(()=> window.scrollTo(0, 0));
       const {state} = props;
       const [value,input] = Input(
         {
           placeholder: "Busque el país",
-          init: ''
+          init: '',
         }
       );
+      
 
-
+      
       if(state){
         return(
-      <div id="CountriesContainer">
+        <div id="CountriesContainer">
           <h1>Lista de paises</h1>  
-         
           <div className="inputFilter"> 
               {input}
           </div>

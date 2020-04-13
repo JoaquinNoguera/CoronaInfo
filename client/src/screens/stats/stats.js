@@ -11,7 +11,6 @@ const Stats =  (props) => {
     const {state} = props;
     const name = props.match.params.place; 
 
-
    
  
 
@@ -91,15 +90,15 @@ const Stats =  (props) => {
             >
             <h1> {name} </h1>
             <div className="pieWrapper">
-                <div className="daysContainer">
-                  <h1>Elige una fecha</h1>
-                    {arrDay}
-                </div>
                         <AnyChart
                         id="anyPie"
                         {...pieSettings}
                         background="#f9f9f9"
                         />
+                <div className="daysContainer">
+                  <h1>Elige una fecha</h1>
+                    {arrDay}
+                </div>
             </div>
             <h2>Grafica Evolutiva</h2>
             <div
