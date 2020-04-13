@@ -3,6 +3,7 @@ import {withRouter} from 'react-router-dom';
 import AnyChart from 'anychart-react';
 import Loading from '../../components/Loading';
 import Month from '../../enum/month';
+import NotFound from '../NotFound';
 import { Chart } from 'react-charts'
 import './style.scss';
 
@@ -15,7 +16,13 @@ const Stats =  (props) => {
  
 
     if(state){
-        const days = (name === 'global') ? (state.days) : (state.countries.find(c => c.name === name).days);
+
+        const countrie = state.countries.find(c => c.name.toUpperCase() === name.toUpperCase());
+        if(!countrie && (name.toUpperCase() !== 'GLOBAL')) return <NotFound/>
+        const days = (name.toUpperCase() === 'GLOBAL') ? (state.days) : (countrie.days);
+        
+        
+
         const [index,setIndex] = React.useState(days.length - 1);
         
         const date = new Date(days[index].lastUpdate);
