@@ -28,8 +28,8 @@ function App(){
       setState(world[0]);
     }
 
-    if(!data){
-        return <Loading/>;
+    if(!state){
+        return <div> <Loading/> </div>
     }else{
     return(
             <HashRouter>
