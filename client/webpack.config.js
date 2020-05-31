@@ -62,7 +62,7 @@ module.exports = {
   devtool: 'source-map',
   devServer: {
     open: true,
-    port: 3000,
+    port: 3001,
     host: '0.0.0.0',
     historyApiFallback: true,
   },
@@ -70,6 +70,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './public/index.html',
       filename: './index.html',
+      favicon: './public/tos.png'
     }),
     new MiniCssExtractPlugin({
       filename: 'assets/[name].css',
