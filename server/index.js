@@ -191,4 +191,13 @@ app.get('/update', async function(_,res){
     res.send('Actualizado');
 })
 
-app.listen(port);
+app.listen(port, () => {
+    setInterval(() => {
+        const dataGlobal = await consultGlobal();
+        await updateGlobal(dataGlobal);
+        dataGlobal.countries.forEach(async (c) => {
+        const dataCountry = await consultCountry(c);
+        await updateCountry(dataCountry);
+        })
+    }, 1000 * 60 * 60 * 24 /*cada dia*/);
+});
