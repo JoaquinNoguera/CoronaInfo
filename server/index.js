@@ -192,7 +192,7 @@ app.get('/update', async function(_,res){
 })
 
 app.listen(port, () => {
-    setInterval(() => {
+    setInterval( async () => {
         const dataGlobal = await consultGlobal();
         await updateGlobal(dataGlobal);
         dataGlobal.countries.forEach(async (c) => {
